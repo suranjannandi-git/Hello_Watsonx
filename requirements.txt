@@ -1,2 +1,2 @@
-python-dotenv
-ibm_watson_machine_learning
+python-dotenv==1.0.1
+ibm-watsonx-ai==1.0.4

@@ -1,4 +1,4 @@
-Accessing IBM watsonx models
+## Accessing IBM watsonx foundation models
 
 ### Environment Setup
 Copy the .env.example file to a new file named .env.
