@@ -6,4 +6,6 @@ Update the values.
 execute requirements.txt
 
 ### Execute
-python hello_watsonx.py
+python call_wx_restapi.py
+python call_wx_sdk.py
+

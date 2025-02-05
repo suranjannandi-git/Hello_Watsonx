@@ -1,2 +1,2 @@
-python-dotenv==1.0.1
-ibm-watsonx-ai==1.0.4
+python-dotenv
+ibm-watsonx-ai
