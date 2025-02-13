@@ -6,6 +6,9 @@ from ibm_watsonx_ai.metanames import GenTextParamsMetaNames as GenParams
 from ibm_watsonx_ai.foundation_models.utils.enums import ModelTypes, DecodingMethods
 from ibm_watsonx_ai import Credentials
 
+import warnings
+warnings.filterwarnings('ignore')
+
 load_dotenv(find_dotenv())
 
 def get_response(prompt):
