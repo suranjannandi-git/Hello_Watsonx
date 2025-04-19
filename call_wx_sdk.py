@@ -35,7 +35,6 @@ def get_response(prompt):
     # return generated_response
     return generated_response['results'][0]['generated_text']
     
-
 if __name__ == "__main__":
     prompt = "What is 1 + 1?"
     # prompt = "Where is Kolkata & Delhi?"
