@@ -5,6 +5,7 @@ from ibm_watsonx_ai.foundation_models import Model
 from ibm_watsonx_ai.metanames import GenTextParamsMetaNames as GenParams
 from ibm_watsonx_ai.foundation_models.utils.enums import ModelTypes, DecodingMethods
 from ibm_watsonx_ai import Credentials
+from ibm_watsonx_ai.foundation_models import ModelInference
 
 import warnings
 warnings.filterwarnings('ignore')
@@ -21,18 +22,21 @@ def get_response(prompt):
     GenParams().get_example_values()
 
     generate_params = {
-        GenParams.MAX_NEW_TOKENS: 25
+        GenParams.MAX_NEW_TOKENS: 250,
     }
-
-    model = Model(
+    
+    model = ModelInference(
         model_id=os.getenv("MODEL_ID", None), #"ibm/granite-13b-instruct-v2",
         params=generate_params,
         credentials=credentials,
         project_id=os.getenv("WX_PROJECT_ID", None)
-        )
+    )
     generated_response = model.generate(prompt=prompt)
+    # return generated_response
     return generated_response['results'][0]['generated_text']
+    
 
 if __name__ == "__main__":
     prompt = "What is 1 + 1?"
+    # prompt = "Where is Kolkata & Delhi?"
     print(prompt, get_response(prompt))
