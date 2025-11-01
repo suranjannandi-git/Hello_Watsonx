@@ -1,8 +1,11 @@
 ## Accessing IBM watsonx foundation models
 
+### Create virtual environment
+python3.12 -m venv venv-dev
+source venv-dev/bin/activate
+
 ### Environment Setup
 Copy the .env.example file to a new file named .env and update the key values.
-
 
 ### Install libraries
 pip install -r requirements.txt
