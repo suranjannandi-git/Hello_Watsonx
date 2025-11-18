@@ -20,3 +20,8 @@ python call_wx_restapi.py
 ##### Execute with API call
 python call_wx_sdk.py
 
+
+docker build -t hello_watsonx .
+docker run hello_watsonx:latest       
+docker run -d --env-file ~/.env -p 5000:5000 --name hello_watsonx hello_watsonx:latest
+docker logs -f hello_watsonx
